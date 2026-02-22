@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wallet Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <header>
+        <h1>💳 Wallet Management System</h1>
+        <p>Secure • Simple • Fast</p>
+    </header>
+
+    <div class="grid">
+
+        <!-- CREATE WALLET -->
+        <div class="card blue">
+            <h2>Create Wallet</h2>
+            <input id="username" placeholder="Username">
+            <input id="mobile" placeholder="Mobile Number">
+            <button onclick="createWallet()">Create</button>
+            <p id="createMsg"></p>
+        </div>
+
+        <!-- WALLET LIST -->
+        <div class="card green">
+            <h2>Wallets</h2>
+            <button onclick="loadWallets()">Refresh</button>
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User</th>
+                    <th>Mobile</th>
+                    <th>Balance</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody id="walletTable"></tbody>
+            </table>
+        </div>
+
+        <!-- TRANSFER -->
+        <div class="card purple">
+            <h2>Transfer Money</h2>
+            <input id="fromMobile" placeholder="From Mobile">
+            <input id="toMobile" placeholder="To Mobile">
+            <input id="amount" placeholder="Amount">
+            <button onclick="transferMoney()">Transfer</button>
+            <p id="transferMsg"></p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
